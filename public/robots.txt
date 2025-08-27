@@ -1,4 +1,25 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dimaspurwanto.com/sitemap.xml
+# Sitemap
+Sitemap: https://dimz.space/sitemap.xml
+
+# Specific rules for common crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block access to sensitive files
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /admin/
+Disallow: /private/
+
+# Allow access to static assets
+Allow: /images/
+Allow: /favicon.svg
+Allow: /CV*.pdf

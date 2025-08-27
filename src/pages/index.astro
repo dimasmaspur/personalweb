@@ -105,8 +105,81 @@ const coreSkills = [
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Dimas Purwanto - Fullstack Developer</title>
-		<meta name="description" content="Personal website of Dimas Purwanto, a passionate software engineer with expertise in modern web technologies." />
+		
+		<!-- Primary Meta Tags -->
+		<title>Dimas Purwanto - Fullstack Developer & Software Engineer Indonesia</title>
+		<meta name="title" content="Dimas Purwanto - Fullstack Developer & Software Engineer Indonesia" />
+		<meta name="description" content="Experienced Fullstack Developer from Indonesia specializing in React, Next.js, Node.js, Java Spring Boot, Golang, Solidity, Blockchain, Smart Contract and modern web technologies. 5+ years building scalable applications for healthcare, education & fintech." />
+		<meta name="keywords" content="Fullstack Developer Indonesia, React Developer, Node.js Developer, Java Spring Boot, Next.js, Golang, Solidity, Blockchain, Smart Contract, Software Engineer, Web Developer Jakarta, Blockchain Developer, Healthcare Software, Education Technology" />
+		<meta name="author" content="Dimas Purwanto" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://dimz.space" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://dimz.space" />
+		<meta property="og:title" content="Dimas Purwanto - Fullstack Developer & Software Engineer Indonesia" />
+		<meta property="og:description" content="Experienced Fullstack Developer from Indonesia specializing in React, Next.js, Node.js, Java Spring Boot,Golang, Solidity, Blockchain, Smart Contract, and modern web technologies. 5+ years building scalable applications." />
+		<meta property="og:image" content="https://dimz.space/images/coinfest.webp" />
+		<meta property="og:site_name" content="Dimas Purwanto Portfolio" />
+		<meta property="og:locale" content="en_US" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://dimz.space" />
+		<meta property="twitter:title" content="Dimas Purwanto - Fullstack Developer & Software Engineer Indonesia" />
+		<meta property="twitter:description" content="Experienced Fullstack Developer from Indonesia specializing in React, Next.js, Node.js, Java Spring Boot,Golang, Solidity, Blockchain, Smart Contract, and modern web technologies." />
+		<meta property="twitter:image" content="https://dimz.space/images/coinfest.webp" />
+		<meta property="twitter:creator" content="@dimasmaspur" />
+		
+		<!-- Additional Meta Tags -->
+		<meta name="theme-color" content="#000000" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<!-- Structured Data JSON-LD -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Dimas Purwanto",
+			"jobTitle": "Fullstack Developer",
+			"description": "Experienced Fullstack Developer from Indonesia specializing in React, Next.js, Node.js, Java Spring Boot,Golang, Solidity, Blockchain, Smart Contract, and modern web technologies",
+			"url": "https://dimz.space",
+			"image": "https://dimz.space/images/coinfest.webp",
+			"sameAs": [
+				"https://github.com/dimasmaspur",
+				"https://linkedin.com/in/dimasmaspur",
+				"https://x.com/dimasmaspur"
+			],
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Primedge Technology Holdings"
+			},
+			"knowsAbout": [
+				"React",
+				"Next.js", 
+				"Node.js",
+				"Java Spring Boot",
+				"Golang",
+				"Solidity",
+				"Blockchain",
+				"Smart Contract",
+				"JavaScript",
+				"TypeScript",
+				"PostgreSQL",
+				"Blockchain Development",
+				"Fullstack Development",
+				"Software Architecture"
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "Indonesia"
+			},
+			"email": "dimasmaspur@gmail.com"
+		}
+		</script>
+		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -473,8 +546,10 @@ const coreSkills = [
 								<img 
 									id="parallax-photo"
 									src="/images/coinfest.webp" 
-									alt="Foto Dimas Purwanto" 
+									alt="Dimas Purwanto - Professional Fullstack Developer and Software Engineer from Indonesia specializing in React, Node.js, and Java Spring Boot" 
 									class="parallax-photo magnetic w-44 h-44 sm:w-52 sm:h-52 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover rounded-2xl sm:rounded-3xl shadow-2xl border-2 sm:border-4 border-white/20"
+									loading="eager"
+									fetchpriority="high"
 								/>
 							</div>
 							
@@ -1079,11 +1154,11 @@ const coreSkills = [
 				
 				setTimeout(() => {
 					loadingDiv.style.opacity = '0';
-					loadingDiv.style.transition = 'opacity 0.5s ease';
+					loadingDiv.style.transition = 'opacity 0.3s ease';
 					setTimeout(() => {
 						document.body.removeChild(loadingDiv);
-					}, 500);
-				}, 2000);
+					}, 300);
+				}, 900);
 			}
 			
 			// 10. Initialize All Animations
@@ -1099,7 +1174,7 @@ const coreSkills = [
 					initParallaxPhoto();
 					initScrollAnimations();
 					initColorWaves();
-				}, 1000);
+				}, 600);
 			}
 			
 			// Start animations when page loads
