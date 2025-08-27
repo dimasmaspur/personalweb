@@ -1,4 +1,4 @@
-/* TEAM */
+npm/* TEAM */
 Developer: Dimas Purwanto
 Site: https://dimz.space
 Location: Indonesia
