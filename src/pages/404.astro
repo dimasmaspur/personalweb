@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+import Layout from '../components/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="404 - Page Not Found | Dimas Purwanto" description="Halaman yang Anda cari tidak ditemukan.">
+  <Navigation />
+  
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- 404 Animation -->
+      <div class="mb-8">
+        <div class="text-9xl font-bold text-gray-200 floating">404</div>
+        <div class="text-2xl text-gray-600 mt-4">Oops! Halaman tidak ditemukan</div>
+      </div>
+
+      <!-- Illustration -->
+      <div class="mb-8">
+        <svg class="w-64 h-64 mx-auto text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
+
+      <!-- Content -->
+      <div class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">
+          Halaman yang Anda cari tidak ada
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Sepertinya Anda tersesat di internet. Jangan khawatir, mari kita bawa Anda kembali ke tempat yang tepat.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <a 
+          href="/" 
+          class="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+        >
+          Kembali ke Home
+        </a>
+        <a 
+          href="/projects" 
+          class="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-50 transition-colors"
+        >
+          Lihat Projects
+        </a>
+        <a 
+          href="/blog" 
+          class="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-50 transition-colors"
+        >
+          Baca Blog
+        </a>
+      </div>
+
+      <!-- Helpful Links -->
+      <div class="text-sm text-gray-500">
+        <p>Atau mungkin Anda sedang mencari:</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-2">
+          <a href="/#about" class="text-blue-600 hover:text-blue-800 transition-colors">About Me</a>
+          <a href="/#experience" class="text-blue-600 hover:text-blue-800 transition-colors">Work Experience</a>
+          <a href="/#contact" class="text-blue-600 hover:text-blue-800 transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-400">
+        © 2024 Dimas Purwanto. Built with ❤️ using Astro & Tailwind CSS.
+      </p>
+    </div>
+  </footer>
+</Layout>

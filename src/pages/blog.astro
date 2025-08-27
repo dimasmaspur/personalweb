@@ -1,0 +1,142 @@
+---
+import '../styles/global.css';
+import Layout from '../components/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+
+const blogPosts = [
+  {
+    title: "Building Modern Web Applications with Astro",
+    excerpt: "Learn how to create fast, modern websites using Astro's island architecture and static site generation capabilities.",
+    date: "2024-01-15",
+    readTime: "5 min read",
+    tags: ["Astro", "Web Development", "SSG"],
+    slug: "building-modern-web-apps-with-astro"
+  },
+  {
+    title: "The Future of Frontend Development",
+    excerpt: "Exploring emerging trends in frontend development, from micro-frontends to edge computing and beyond.",
+    date: "2024-01-10",
+    readTime: "8 min read",
+    tags: ["Frontend", "Trends", "Technology"],
+    slug: "future-of-frontend-development"
+  },
+  {
+    title: "Optimizing React Performance",
+    excerpt: "Best practices and techniques for optimizing React applications, including memoization, code splitting, and performance monitoring.",
+    date: "2024-01-05",
+    readTime: "6 min read",
+    tags: ["React", "Performance", "Optimization"],
+    slug: "optimizing-react-performance"
+  },
+  {
+    title: "Introduction to TypeScript",
+    excerpt: "A comprehensive guide to getting started with TypeScript, covering types, interfaces, and best practices.",
+    date: "2023-12-20",
+    readTime: "10 min read",
+    tags: ["TypeScript", "JavaScript", "Programming"],
+    slug: "introduction-to-typescript"
+  },
+  {
+    title: "CSS Grid vs Flexbox: When to Use What",
+    excerpt: "Understanding the differences between CSS Grid and Flexbox, and when to use each layout method effectively.",
+    date: "2023-12-15",
+    readTime: "7 min read",
+    tags: ["CSS", "Layout", "Design"],
+    slug: "css-grid-vs-flexbox"
+  },
+  {
+    title: "Building RESTful APIs with Node.js",
+    excerpt: "Step-by-step guide to creating robust and scalable RESTful APIs using Node.js, Express, and MongoDB.",
+    date: "2023-12-10",
+    readTime: "12 min read",
+    tags: ["Node.js", "API", "Backend"],
+    slug: "building-restful-apis-nodejs"
+  }
+];
+
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('id-ID', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+};
+---
+
+<Layout title="Blog - Dimas Purwanto" description="Read my thoughts on web development, programming, and technology trends.">
+  <Navigation />
+  
+  <!-- Header Section -->
+  <section class="pt-32 pb-16 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        My <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Blog</span>
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Thoughts, tutorials, and insights about web development, programming, and technology.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-12">
+        {blogPosts.map(post => (
+          <article class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="p-8">
+              <div class="flex flex-wrap gap-2 mb-4">
+                {post.tags.map(tag => (
+                  <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4 hover:text-blue-600 transition-colors">
+                <a href={`/blog/${post.slug}`}>{post.title}</a>
+              </h2>
+              <p class="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
+              <div class="flex items-center justify-between text-sm text-gray-500">
+                <span>{formatDate(post.date)}</span>
+                <span>{post.readTime}</span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Stay Updated</h2>
+      <p class="text-xl text-gray-600 mb-8">
+        Subscribe to get notified about new blog posts and updates.
+      </p>
+      <form class="max-w-md mx-auto flex gap-4">
+        <input 
+          type="email" 
+          placeholder="Enter your email" 
+          class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        />
+        <button 
+          type="submit"
+          class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-400">
+        © 2024 Dimas Purwanto. Built with ❤️ using Astro & Tailwind CSS.
+      </p>
+    </div>
+  </footer>
+</Layout>
