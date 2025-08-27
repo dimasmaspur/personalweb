@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: Dimas Purwanto
+Site: https://dimz.space
+Location: Indonesia
+
+/* THANKS */
+Built with Astro, Tailwind CSS, and lots of ☕
+
+/* SITE */
+Last update: 2025/01/27
+Language: English / Indonesian
+Doctype: HTML5
+Technologies: Astro, TypeScript, Tailwind CSS, JavaScript

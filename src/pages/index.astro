@@ -137,6 +137,19 @@ const coreSkills = [
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		
+		<!-- Geographic & Local SEO -->
+		<meta name="geo.region" content="ID" />
+		<meta name="geo.placename" content="Indonesia" />
+		<meta name="ICBM" content="-6.2088,106.8456" />
+		<meta name="DC.title" content="Dimas Purwanto - Fullstack Developer Indonesia" />
+		
+		<!-- Additional SEO Meta -->
+		<meta name="rating" content="general" />
+		<meta name="revisit-after" content="7 days" />
+		<meta name="distribution" content="web" />
+		<meta name="language" content="English" />
+		<meta name="category" content="Technology, Software Development" />
+		
 		<!-- Structured Data JSON-LD -->
 		<script type="application/ld+json">
 		{
@@ -179,6 +192,38 @@ const coreSkills = [
 			"email": "dimasmaspur@gmail.com"
 		}
 		</script>
+		
+		<!-- WebSite Schema for Search -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Dimas Purwanto Portfolio",
+			"url": "https://dimz.space",
+			"description": "Professional portfolio of Dimas Purwanto, Fullstack Developer from Indonesia",
+			"author": {
+				"@type": "Person",
+				"name": "Dimas Purwanto"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://dimz.space?search={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
+		}
+		</script>
+		
+		<!-- Analytics (Replace with your actual IDs) -->
+		<!-- Google Analytics 4 -->
+		<!--
+		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'GA_MEASUREMENT_ID');
+		</script>
+		-->
 		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
